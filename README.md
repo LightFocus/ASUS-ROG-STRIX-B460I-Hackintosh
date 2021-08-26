@@ -4,21 +4,21 @@ Building a Hackintosh on ROG STRIX B460-I using OpenCore.
 ## Software
 | Name | Version |
 | :-: | :-: |
-| macOS | 11.4 |
-| OpenCore | 0.7.0 |
+| macOS | 11.5.2 |
+| OpenCore | 0.7.2 |
 
 ## Features
 | Function | Status | Comments |
 | :-: | :-: | :-: |
-| USB | &#9989; | Mapped all back panel USB-A ports |
-| Ethernet | &#9989; | |
-| Wi-Fi | &#9989; | Need to swap Wi-Fi card |
-| Bluetooth | &#9989; | Need to swap Wi-Fi card |
-| AirDrop, Handoff, Universal Clipboard | &#9989; | Need to swap Wi-Fi card |
-| DRM | &#9989; | Tested using Amazon Prime trailer |
-| Hardware Acceleration | &#9989; | Enable iGPU Multi-Monitor in BIOS |
-| Sleep | &#10071; | Instant wake up when use HDMI and DP together, otherwise sleep is fine |
-| USB-C on dGPU | &#10071; | Charging and video output working, but no data transmission |
+| USB | ✅ | See USB mapping section |
+| Ethernet | ✅ | |
+| Wi-Fi | ✅ | Need to swap Wi-Fi card |
+| Bluetooth | ✅ | Need to swap Wi-Fi card |
+| AirDrop, Handoff, Universal Clipboard | ✅ | Need to swap Wi-Fi card |
+| Hardware Acceleration | ✅ | Enable iGPU Multi-Monitor in BIOS |
+| DRM | ❗ | WhateverGreen has no support for Navi 21 yet, use iGPU if you need DRM |
+| Sleep | ❗ | Instant wake up when use HDMI and DP together, otherwise sleep is fine |
+| USB-C on dGPU | ❗ | Charging and video output working, but no data transmission |
 
 ## Hardware
 | Part | Model | Comments |
@@ -55,6 +55,17 @@ If you're not using a Fenvi card, then you'll need two more kexts for it to work
 You need to put the required kexts in OC/Kexts. After that, run **File -> OC Snapshot** in ProperTree and choose your OC folder so the new kexts will be loaded.
 
 You can also use mini PCIe Wi-Fi card with M.2 adapter but it won't fit into the original container so it's a hit or miss.
+
+## USB Mapping
+This motherboard has several USB ports and they're defined as the following:
+![Top](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/mb-top.png)
+![Back](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/mb-back.png)
+
+The 20Gbps type-c port on the back panel does not need mapping as it's not controlled by XHC but PXSX, possibly a PCIe controller. The type-c port that's used as audio output is useless in macOS.
+
+For my personal use, I mapped HS01 - HS08, HS12, SS01 - SS02, SS05 - SS08 due to the 15 ports limitation in macOS. So I have all the USB ports on the back panel work albeit port 03 and 04 are only USB 2.0, also I have two USB 3.0 ports on the front panel.
+
+If you want to change the mapping, make your own USBMap.kext and replace the one in the OC/Kexts folder.
 
 ## BIOS
 Few things need to be taken care of in the BIOS.
