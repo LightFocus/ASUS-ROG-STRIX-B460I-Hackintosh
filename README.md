@@ -123,23 +123,23 @@ Using GenSMBIOS, you'll get **Type** , **Serial** , **Board Serial** and **SmUUI
 
 **TL;DR** You need your own serial number and if you have a different CPU or want to use iGPU as output, you need to change a few things in config.plist
 
-## Screenshots and Benchmark
+## Screenshots and Benchmark (Tested on macOS 11.5.2)
 
-**Geekbench 5**
-
-Hardware Info
+**Hardware Info**
 
 ![Hardware](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/Sensei.png)
 
+**Geekbench 5**
+
 CPU Scores
 
-![CPU](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/CPU%20Scores.png)
+![CPU](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/CPU.png)
 
 GPU Scores
 
-![GPU](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/GPU%20Scores.png)
+![GPU](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/GPU.png)
 
 **Blackmagic RAW Speed Test**
 
-![BM RAW](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/BM%20RAW.png)
+![BM RAW](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/BM.png)
 
