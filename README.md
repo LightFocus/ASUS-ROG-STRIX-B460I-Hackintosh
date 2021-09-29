@@ -4,21 +4,16 @@ Building a Hackintosh on ROG STRIX B460-I using OpenCore.
 ## Software
 | Name | Version |
 | :-: | :-: |
-| macOS | 11.5.2 |
-| OpenCore | 0.7.2 |
+| macOS | 11.6 |
+| OpenCore | 0.7.3 |
+| AppleALC | 1.6.5 |
+| FakePCIID | 1.3.15 |
+| IntelMausiEthernet | 1.0.8 |
+| Lilu | 1.5.7 |
+| NVMeFix | 1.1.0 |
+| VirtualSMC | 1.2.8 |
+| WhateverGreen | 1.5.4 |
 
-## Features
-| Function | Status | Comments |
-| :-: | :-: | :-: |
-| USB | ✅ | See USB mapping section |
-| Ethernet | ✅ | |
-| Wi-Fi | ✅ | Need to swap Wi-Fi card |
-| Bluetooth | ✅ | Need to swap Wi-Fi card |
-| AirDrop, Handoff, Universal Clipboard | ✅ | Need to swap Wi-Fi card |
-| Hardware Acceleration | ✅ | Enable iGPU Multi-Monitor in BIOS |
-| DRM | ❗ | WhateverGreen has no support for Navi 21 yet, use iGPU if you need DRM |
-| Sleep | ❗ | Instant wake up when use HDMI and DP together, otherwise sleep is fine |
-| USB-C on dGPU | ❗ | Charging and video output working, but no data transmission |
 
 ## Hardware
 | Part | Model | Comments |
@@ -32,6 +27,19 @@ Building a Hackintosh on ROG STRIX B460-I using OpenCore.
 | PSU | Corsair SF750 Platinum | |
 | Wi-Fi Card | BCM93452Z | Fenvi card, no kexts needed |
 
+## Features
+| Function | Status | Comments |
+| :-: | :-: | :-: |
+| USB | ✅ | See USB mapping section |
+| Ethernet | ✅ | |
+| Wi-Fi | ✅ | Need to swap Wi-Fi card |
+| Bluetooth | ✅ | Need to swap Wi-Fi card |
+| AirDrop, Handoff, Universal Clipboard | ✅ | Need to swap Wi-Fi card |
+| Hardware Acceleration | ✅ | Enable iGPU Multi-Monitor in BIOS |
+| DRM | ❗ | WhateverGreen has no support for Navi 21 yet, use Chrome if you need DRM |
+| Sleep | ❗ | Instant wake up when use HDMI and DP together, otherwise sleep is fine |
+| USB-C on dGPU | ❗ | Charging and video output working, but no data transmission |
+
 ## Wi-Fi Card
 The reason to choose this mobo is that it has an AX200 Wi-Fi Card pre-installed which means no CNVi so we can swap the card.
 There are quite limiting choices for M.2 Wi-Fi card:
@@ -44,8 +52,8 @@ There are quite limiting choices for M.2 Wi-Fi card:
 
 If you're not using a Fenvi card, then you'll need two more kexts for it to work:
 
-**AirportBrcmFixup**(https://github.com/acidanthera/AirportBrcmFixup/releases)
-**BrcmPatchRAM**(https://github.com/acidanthera/BrcmPatchRAM/releases)
+**AirportBrcmFixup** (https://github.com/acidanthera/AirportBrcmFixup/releases)
+**BrcmPatchRAM** (https://github.com/acidanthera/BrcmPatchRAM/releases)
 <ul>
 <li>BrcmBluetoothInjector</li>
 <li>BrcmFirmwareData</li>
@@ -88,9 +96,9 @@ Few things need to be taken care of in the BIOS.
 Note: In the newer version of BIOS, when enabling **Above 4G decoding**, please make sure **Re-size BAR Support** is **Disable**. Make sure you connect the monitor to the dGPU.
 
 ## Modify config.plist in the OC folder
-This repository contains EFI based on OpenCore 0.6.6. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
+This repository contains EFI based on OpenCore 0.7.3. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
 
-You need ProperTree(https://github.com/corpnewt/ProperTree) to open and edit config.plist.
+You need ProperTree (https://github.com/corpnewt/ProperTree) to open and edit config.plist.
 
 ### DeviceProperties
 Since I have both iGPU and dGPU, I set it as output by dGPU and iGPU is only used for hardware accleration.
@@ -106,7 +114,7 @@ If you hate all the debug info when booting, you can also remove **-v** paramete
 ### PlatformInfo
 I left this part blank intentionally because you really need your own serial number.
 
-To create a new serial number, you can use GenSMBIOS(https://github.com/corpnewt/GenSMBIOS)
+To create a new serial number, you can use GenSMBIOS (https://github.com/corpnewt/GenSMBIOS)
 
 As for SMBIOS, it depends on your CPU:
 | SMBIOS | CPU |
