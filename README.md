@@ -53,6 +53,8 @@ There are quite limiting choices for M.2 Wi-Fi card:
 If you're not using a Fenvi card, then you'll need two more kexts for it to work:
 
 **AirportBrcmFixup** (https://github.com/acidanthera/AirportBrcmFixup/releases)
+
+
 **BrcmPatchRAM** (https://github.com/acidanthera/BrcmPatchRAM/releases)
 <ul>
 <li>BrcmBluetoothInjector</li>
@@ -66,8 +68,8 @@ You can also use mini PCIe Wi-Fi card with M.2 adapter but it won't fit into the
 
 ## USB Mapping
 This motherboard has several USB ports and they're defined as the following:
-![Top](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/mb-top.png)
-![Back](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/mb-back.png)
+![Top](Images/mb-top.png)
+![Back](Images/mb-back.png)
 
 The 20Gbps type-c port on the back panel does not need mapping as it's not controlled by XHC but PXSX, possibly a PCIe controller. The type-c port that's used as audio output is useless in macOS.
 
@@ -135,19 +137,19 @@ Using GenSMBIOS, you'll get **Type** , **Serial** , **Board Serial** and **SmUUI
 
 **Hardware Info**
 
-![Hardware](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/Sensei.png)
+![Hardware](Images/Sensei.png)
 
 **Geekbench 5**
 
 CPU Scores
 
-![CPU](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/CPU.png)
+![CPU](Images/CPU.png)
 
 GPU Scores
 
-![GPU](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/GPU.png)
+![GPU](Images/GPU.png)
 
 **Blackmagic RAW Speed Test**
 
-![BM RAW](https://lightfocus-1256547063.cos.ap-hongkong.myqcloud.com/hackintosh/BM.png)
+![BM RAW](Images/BM.png)
 
