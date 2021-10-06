@@ -5,14 +5,14 @@ Building a Hackintosh on ROG STRIX B460-I using OpenCore.
 | Name | Version |
 | :-: | :-: |
 | macOS | 11.6 |
-| OpenCore | 0.7.3 |
-| AppleALC | 1.6.5 |
+| OpenCore | 0.7.4 |
+| AppleALC | 1.6.6 |
 | FakePCIID | 1.3.15 |
 | IntelMausiEthernet | 1.0.8 |
 | Lilu | 1.5.7 |
 | NVMeFix | 1.1.0 |
 | VirtualSMC | 1.2.8 |
-| WhateverGreen | 1.5.4 |
+| WhateverGreen | 1.5.5 |
 
 
 ## Hardware
@@ -96,7 +96,7 @@ Few things need to be taken care of in the BIOS.
 Note: In the newer version of BIOS, when enabling **Above 4G decoding**, please make sure **Re-size BAR Support** is **Disable**. Make sure you connect the monitor to the dGPU.
 
 ## Modify config.plist in the OC folder
-This repository contains EFI based on OpenCore 0.7.3. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
+This repository contains EFI based on OpenCore 0.7.4. If you're using the same mobo, then this EFI is likely working for you. But if you have different parts other than mobo, please read the following content and modify it accrodingly.
 
 You need ProperTree (https://github.com/corpnewt/ProperTree) to open and edit config.plist.
 
