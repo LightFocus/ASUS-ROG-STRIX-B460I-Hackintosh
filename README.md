@@ -1,6 +1,8 @@
 # ASUS ROG B460I Hackintosh
 
 Building a Hackintosh on ROG STRIX B460-I using OpenCore.
+
+### I've updated my mobo to ROG Z490G which you can find the new EFI [here](https://github.com/LightFocus/ASUS-ROG-STRIX-Z490G-Hackintosh). This repo is not longer under maintenance.
 ## Software
 | Name | Version |
 | :-: | :-: |
@@ -43,6 +45,7 @@ Building a Hackintosh on ROG STRIX B460-I using OpenCore.
 ## Wi-Fi Card
 The reason to choose this mobo is that it has an AX200 Wi-Fi Card pre-installed which means no CNVi so we can swap the card.
 There are quite limiting choices for M.2 Wi-Fi card:
+
 | Chipset | Model |
 | :-: | :-: |
 | BCM94360NG | Fenvi BCM94360NG |
@@ -119,6 +122,7 @@ I left this part blank intentionally because you really need your own serial num
 To create a new serial number, you can use GenSMBIOS (https://github.com/corpnewt/GenSMBIOS)
 
 As for SMBIOS, it depends on your CPU:
+
 | SMBIOS | CPU |
 | :-: | :-: |
 | iMac20,1 | i7-10700K and lower (8 core and lower) |
